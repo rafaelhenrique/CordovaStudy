@@ -1,4 +1,6 @@
-install: add-platform requirements build-android emulate
+install: 
+	cordova prepare
+	#add-platform requirements build-android emulate
 
 emulate:
 	cordova emulate android
@@ -10,8 +12,9 @@ requirements:
 	cordova requirements
 
 add-platform: 
-	cordova platform add android --save
+	cordova platform add android@^4.1.1 --save
+	#cordova platform add android --save
 
-run-native:
+run:
 	cordova run android
 
